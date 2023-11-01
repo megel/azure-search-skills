@@ -47,9 +47,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: python-app
-          working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
           path: |
-            release.zip
+            ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/release.zip
             !venv/
 
   deploy:
