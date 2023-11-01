@@ -24,6 +24,7 @@ jobs:
       - name: Setup Python version
         uses: actions/setup-python@v1
         with:
+          working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
           python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Create and start virtual environment
